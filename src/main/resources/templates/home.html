@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Cadastro</title>
+  <link rel="stylesheet"  th:href="@{/css/home.css}">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao Sistema de Cadastro</h1>
+    <p>Gerencie usuários de forma simples e rápida</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>O que deseja fazer?</h2>
+      <div class="buttons">
+        <a th:href="@{/cadastro}" class="btn">Cadastrar</a>
+        <a th:href="@{/login}" class="btn secondary">Login</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Sistema de Cadastro Básico | Desenvolvido com 💻 por Júlio</p>
+  </footer>
+</body>
+</html>
