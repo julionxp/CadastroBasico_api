@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="final-page">
+        <h1>Bem-vindo!</h1>
+        <p th:text="${mensagem}">Login efetuado com sucesso.</p>
+        <a th:href="@{/home}" class="btn" style="margin-top: 2rem; display: inline-block;">Voltar à Home</a>
+    </div>
+</body>
+</html>

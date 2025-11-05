@@ -1,63 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-
 * {
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
+/* CONTAINERS PRINCIPAIS */
 .container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    width: 350px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  width: 350px;
 }
 
+/* TÍTULOS E TEXTOS */
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  color: #444;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* FORMULÁRIOS */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    margin-bottom: 0.3rem;
-    color: #444;
-    font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #444;
+  font-weight: bold;
 }
 
 input {
-    padding: 0.6rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 button {
-    padding: 0.7rem;
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #357ABD;
+  background-color: #357ABD;
+}
+
+/* BOTÕES GERAIS */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+}
+
+/* HOME (Página inicial com botões de navegação) */
+
+body.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+body.home header, h1, p {
+  text-align: center;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+body.home main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.home .container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  width: 350px;
+  text-align: center;
+}
+
+body.home .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+body.home footer {
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #fff;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+/* PÁGINA FINAL (Bem-vindo após login) */
+.final-page {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 380px;
+}
+
+.final-page h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.final-page p {
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.final-page .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.final-page .btn:hover {
+  background-color: #357ABD;
+}
+
+.cadastro h1 {
+  color: #333;
+}
+
+.login h1 {
+  color: #333;
+}
+
+.login .erro {
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+  .container,
+  .final-page {
+    width: 90%;
+    padding: 1.5rem;
+  }
 }
